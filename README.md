@@ -84,8 +84,27 @@ These are the general conditions for this project:
   # What ports, IPs and protocols we listen for  
   Port 2200
   ```
+#### 4. Prevent login as root
 
-#### 4. Configure the Uncomplicated Firewall (UFW)
+- Run command `sudo nano /etc/ssh/sshd_config` to edit the config file to prevent logins as root
+
+- Search for these lines:
+  ```
+  # Authentication:
+  LoginGraceTime 120
+  PermitRootLogin prohibit-password
+  StrictModes yes
+  ```
+
+- Change it to:
+  ```
+  # Authentication:
+  LoginGraceTime 120
+  PermitRootLogin no
+  StrictModes yes
+  ```
+
+#### 5. Configure the Uncomplicated Firewall (UFW)
 
 - To configure the UFW run:
   ```
@@ -99,7 +118,7 @@ These are the general conditions for this project:
 
 - To start the UFW run command: `sudo ufw enable`
 
-#### 5. Configure the Lightsail Firewall
+#### 6. Configure the Lightsail Firewall
 
 - Return to the Lightsail webpage and change to the `Networking-Tag`
 
@@ -113,11 +132,11 @@ These are the general conditions for this project:
   ```
 
 ### C. Give `grader` access  
-#### 6. Create a new user named `grader`  
+#### 7. Create a new user named `grader`  
 
 - Run command `sudo adduser grader`, enter a password and user-details (optionally).
 
-#### 7. Give `grader` the permission to `sudo`
+#### 8. Give `grader` the permission to `sudo`
 
 - Run command `sudo visudo` to edit the sudoers-file.
 
@@ -132,19 +151,19 @@ These are the general conditions for this project:
   grader  ALL=(ALL:ALL) ALL        
   ```
 
-#### 8. Create an SSH key pair for `grader`
+#### 9. Create an SSH key pair for `grader`
 
 - Download PuTTY and follow the instructions in this [Youtube-Video](https://www.youtube.com/watch?v=bi7ow5NGC-U) from LinuxAcademy.com
 
 - In order to follow these instruction a private key has to be dowloaded from the 'Account' menu on Amazon Lightsail. To do so click on `SSH keys` tab and download the `Default Private Key`.
 
 ### D. Prepare to deploy the project
-#### 9. Configure the local timezone to UTC
+#### 10. Configure the local timezone to UTC
 - The local timezone is already set to UTC by default.  
 
 - It could have been changed by running the command `sudo dpkg-reconfigure tzdata` and following the prompt.
 
-#### 10. Install and configure Apache to serve a Python mod_wsgi application
+#### 11. Install and configure Apache to serve a Python mod_wsgi application
 While logged in as `grader`:  
 
 - Run command `sudo apt-get install apache2` to install Apache
@@ -153,7 +172,7 @@ While logged in as `grader`:
 
 - Run command `sudo a2enmod wsgi` to enable mod_wsgi
 
-#### 11. Install and configure PostgreSQL  
+#### 12. Install and configure PostgreSQL  
 While logged in as `grader`:  
 
 - Run command `sudo apt-get install postgresql` to install `PostgreSQL`
@@ -195,12 +214,12 @@ While logged in as `grader`:
 
 - Run command `exit` to return to user `grader`
 
-#### 12. Install `git`
+#### 13. Install `git`
 
 - Run command `sudo apt-get install git` to install `git`
 
 ### E. Deploy the Item Catalog project
-#### 13. Clone and setup Item Catalog project from Github
+#### 14. Clone and setup Item Catalog project from Github
 
 - Run command `sudo mkdir /var/www/catalog` to create directory `/var/www/catalog`
 
@@ -244,7 +263,7 @@ Go to [GoogleAPI Dashboard](https://console.developers.google.com/apis/dashboard
 
 - Run command `sudo nano client_secrets.json` to edit the file
 
-#### 14. Set up the application correctly
+#### 15. Set up the application correctly
 
 - Run command `sudo apt-get install python-pip` to install `pip`
 
