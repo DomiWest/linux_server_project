@@ -28,6 +28,7 @@ These are the general conditions for this project:
 - [Deploy a Flask Application on Ubuntu 14.04 - ProfitBricks](https://devops.profitbricks.com/tutorials/deploy-a-flask-application-on-ubuntu-1404/)  
 
 ##Steps to complete the project  
+  
 ###A. Get a server  
 ###1. Start a new Ubuntu Linux server instance on [Amazon Lightsail](https://aws.amazon.com/de/lightsail/?sc_channel=PS&sc_campaign=acquisition_DEsc_publisher=google&sc_medium=ACQ-P%7CPS-GO%7CBrand%7CDesktop%7CSU%7CCompute%7CLightsail%7CDE%7CEN%7CText&sc_content=lightsail_e&sc_detail=amazon%20lightsail&sc_category=Compute&sc_segment=293644508117&sc_matchtype=e&sc_country=DE&s_kwcid=AL!4422!3!293644508117!e!!g!!amazon%20lightsail&ef_id=W5lNNwAAAImYcDaw:20180912173031:s)
 
