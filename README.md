@@ -27,10 +27,10 @@ These are the general conditions for this project:
 
 - [Deploy a Flask Application on Ubuntu 14.04 - ProfitBricks](https://devops.profitbricks.com/tutorials/deploy-a-flask-application-on-ubuntu-1404/).  
 
-##Steps to complete the project  
+## Steps to complete the project  
 
-###A. Get a server  
-###1. Start a new Ubuntu Linux server instance on [Amazon Lightsail](https://aws.amazon.com/de/lightsail/?sc_channel=PS&sc_campaign=acquisition_DEsc_publisher=google&sc_medium=ACQ-P%7CPS-GO%7CBrand%7CDesktop%7CSU%7CCompute%7CLightsail%7CDE%7CEN%7CText&sc_content=lightsail_e&sc_detail=amazon%20lightsail&sc_category=Compute&sc_segment=293644508117&sc_matchtype=e&sc_country=DE&s_kwcid=AL!4422!3!293644508117!e!!g!!amazon%20lightsail&ef_id=W5lNNwAAAImYcDaw:20180912173031:s)
+### A. Get a server  
+#### 1. Start a new Ubuntu Linux server instance on [Amazon Lightsail](https://aws.amazon.com/de/lightsail/?sc_channel=PS&sc_campaign=acquisition_DEsc_publisher=google&sc_medium=ACQ-P%7CPS-GO%7CBrand%7CDesktop%7CSU%7CCompute%7CLightsail%7CDE%7CEN%7CText&sc_content=lightsail_e&sc_detail=amazon%20lightsail&sc_category=Compute&sc_segment=293644508117&sc_matchtype=e&sc_country=DE&s_kwcid=AL!4422!3!293644508117!e!!g!!amazon%20lightsail&ef_id=W5lNNwAAAImYcDaw:20180912173031:s)
 
 - Create an account for Amazon Web Services and log in to Amazon Lightsail
 
@@ -46,8 +46,8 @@ These are the general conditions for this project:
 
 - Click `Connect using SSH` to connect to the instance as user `ubuntu`
 
-###B. Secure the server  
-###2. Update all currently installed packages    
+### B. Secure the server  
+#### 2. Update all currently installed packages    
 
 To update installed packages run:
 
@@ -56,7 +56,7 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-###3. Change the SSH port from 22 to 2200  
+#### 3. Change the SSH port from 22 to 2200  
 
 - Run command `sudo nano /etc/ssh/sshd_config` to edit the `sshd_config-file`.  
 
@@ -80,7 +80,7 @@ sudo apt-get upgrade
   Port 2200
   ```
 
-###4. Configure the Uncomplicated Firewall (UFW)
+#### 4. Configure the Uncomplicated Firewall (UFW)
 
 - To configure the UFW run:
   ```
@@ -93,7 +93,7 @@ sudo apt-get upgrade
   ```
 - To start the UFW run command: `sudo ufw enable`
 
-###5. Configure the Lightsail Firewall
+#### 5. Configure the Lightsail Firewall
 
 - Return to the Lightsail webpage and change to the `Networking-Tag`
 
@@ -106,12 +106,12 @@ sudo apt-get upgrade
   | Custom      | TCP      | 2200       |  
   ```
 
-###C. Give `grader` access  
-###6. Create a new user named `grader`  
+### C. Give `grader` access  
+#### 6. Create a new user named `grader`  
 
 - Run command `sudo adduser grader`, enter a password and user-details (optionally).
 
-###7. Give `grader` the permission to `sudo`
+#### 7. Give `grader` the permission to `sudo`
 
 - Run command `sudo visudo` to edit the sudoers-file.
 
@@ -126,19 +126,19 @@ sudo apt-get upgrade
   grader  ALL=(ALL:ALL) ALL        
   ```
 
-###8. Create an SSH key pair for `grader`
+#### 8. Create an SSH key pair for `grader`
 
 - Download PuTTY and follow the instructions in this [Youtube-Video](https://www.youtube.com/watch?v=bi7ow5NGC-U) from LinuxAcademy.com
 
 - In order to follow these instruction a private key has to be dowloaded from the 'Account' menu on Amazon Lightsail. To do so click on `SSH keys` tab and download the `Default Private Key`.
 
-###D. Prepare to deploy the project
-###9. Configure the local timezone to UTC
+### D. Prepare to deploy the project
+#### 9. Configure the local timezone to UTC
 - The local timezone is already set to UTC by default.  
 
 - It could have been changed by running the command `sudo dpkg-reconfigure tzdata` and following the prompt.
 
-###10. Install and configure Apache to serve a Python mod_wsgi application
+#### 10. Install and configure Apache to serve a Python mod_wsgi application
 While logged in as `grader`:  
 
 - Run command `sudo apt-get install apache2` to install Apache
@@ -147,7 +147,7 @@ While logged in as `grader`:
 
 - Run command `sudo a2enmod wsgi` to enable mod_wsgi
 
-###11. Install and configure PostgreSQL  
+#### 11. Install and configure PostgreSQL  
 While logged in as `grader`:  
 
 - Run command `sudo apt-get install postgresql` to install `PostgreSQL`
@@ -189,12 +189,12 @@ While logged in as `grader`:
 
 - Run command `exit` to return to user `grader`
 
-###12. Install `git`
+#### 12. Install `git`
 
 - Run command `sudo apt-get install git` to install `git`
 
-###E. Deploy the Item Catalog project
-###13. Clone and setup Item Catalog project from Github
+### E. Deploy the Item Catalog project
+#### 13. Clone and setup Item Catalog project from Github
 
 - Run command `sudo mkdir /var/www/catalog` to create directory `/var/www/catalog`
 
@@ -238,7 +238,7 @@ Go to [GoogleAPI Dashboard](https://console.developers.google.com/apis/dashboard
 
 - Run command `sudo nano client_secrets.json` to edit the file
 
-###14. Set up the application correctly
+#### 14. Set up the application correctly
 
 - Run command `sudo apt-get install python-pip` to install pip
 
