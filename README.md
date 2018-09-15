@@ -2,10 +2,15 @@
 
 ## Project Overview
 
->The project's goal was to do a baseline installation of a Linux server and to prepare it to host a web application. This contains to secure the server from a number of attack vectors, to install and configure a database server and to deploy one of my existing web applications onto it.
+>The project's goal was to do a baseline installation of a Linux server and to
+ prepare it to host a web application. This contains to secure the server from
+ a number of attack vectors, to install and configure a database server and to
+ deploy one of my existing web applications onto it.
 
 ## Project Result
->The result of the project can be visited under [http://18.185.89.147](http://18.185.89.147) or [http://ec2-18-185-89-147.eu-central-1.compute.amazonaws.com/](http://ec2-18-185-89-147.eu-central-1.compute.amazonaws.com/) (as long as my Amazon Lightsail instance is active).
+>The result of the project can be visited under
+ [http://18.185.89.147](http://18.185.89.147) or [http://ec2-18-185-89-147.eu-central-1.compute.amazonaws.com/](http://ec2-18-185-89-147.eu-central-1.compute.amazonaws.com/)
+ (as long as my Amazon Lightsail instance is active).
 
 ## General conditions
 These are the general conditions for this project:
