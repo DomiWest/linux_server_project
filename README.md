@@ -25,7 +25,7 @@ These are the general conditions for this project:
 
 - [How To Deploy a Flask Application on an Ubuntu VPS - Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
 
-- [Deploy a Flask Application on Ubuntu 14.04 - ProfitBricks](https://devops.profitbricks.com/tutorials/deploy-a-flask-application-on-ubuntu-1404/)
+- [Deploy a Flask Application on Ubuntu 14.04 - ProfitBricks](https://devops.profitbricks.com/tutorials/deploy-a-flask-application-on-ubuntu-1404/)  
 
 ##Steps to complete the project  
 ###A. Get a server  
