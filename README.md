@@ -14,7 +14,7 @@ These are the general conditions for this project:
 
 - Use Linux distribution [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
 
-- The application which is to be deployed is the [Item Catalog project](https://github.com/DomiWest/item-catalog_project) created in Udacity's [Fullstack Webdeveloper Nanodegree program](https://eu.udacity.com/course/full-stack-web-developer-nanodegree--nd004).
+- The application which is to be deployed is the [Item Catalog project](https://github.com/DomiWest/item-catalog_project) created in Udacity's [Fullstack Webdeveloper Nanodegree Program](https://eu.udacity.com/course/full-stack-web-developer-nanodegree--nd004).
 
 - The database server is [PostgreSQL](https://www.postgresql.org/).
 
@@ -25,7 +25,7 @@ These are the general conditions for this project:
 
 - [How To Deploy a Flask Application on an Ubuntu VPS - Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
 
-- [Deploy a Flask Application on Ubuntu 14.04 - ProfitBricks](https://devops.profitbricks.com/tutorials/deploy-a-flask-application-on-ubuntu-1404/).  
+- [Deploy a Flask Application on Ubuntu 14.04 - ProfitBricks](https://devops.profitbricks.com/tutorials/deploy-a-flask-application-on-ubuntu-1404/)  
 
 ## Steps to complete the project  
 
@@ -49,12 +49,12 @@ These are the general conditions for this project:
 ### B. Secure the server  
 #### 2. Update all currently installed packages    
 
-To update installed packages run:
+- To update installed packages run:
 
-```
-sudo apt-get update  
-sudo apt-get upgrade
-```
+  ```
+  sudo apt-get update  
+  sudo apt-get upgrade
+  ```
 
 #### 3. Change the SSH port from 22 to 2200  
 
@@ -91,6 +91,7 @@ sudo apt-get upgrade
   sudo ufw allow 123/udp
   sudo ufw deny 22
   ```
+
 - To start the UFW run command: `sudo ufw enable`
 
 #### 5. Configure the Lightsail Firewall
@@ -240,7 +241,7 @@ Go to [GoogleAPI Dashboard](https://console.developers.google.com/apis/dashboard
 
 #### 14. Set up the application correctly
 
-- Run command `sudo apt-get install python-pip` to install pip
+- Run command `sudo apt-get install python-pip` to install `pip`
 
 - Run command `sudo apt-get install python-virtualenv` to install virtual environment
 
@@ -248,7 +249,7 @@ Go to [GoogleAPI Dashboard](https://console.developers.google.com/apis/dashboard
 
 - Run command `sudo chown -R grader:grader venv2/` to change the ownership of the virtual environment to `grader`
 
-- Run `. venv2/bin/activate` to activate the virtual environment
+- Run `sudo . venv2/bin/activate` to activate the virtual environment
 
 - Run the following commands to install important dependencies:
   ```
@@ -261,7 +262,7 @@ Go to [GoogleAPI Dashboard](https://console.developers.google.com/apis/dashboard
   sudo pip install psycopg2
   ```
 
-- Run command `python __init__.py` to start the item catalog application
+- Run command `python __init__.py` to start the Item-Catalog application
 
 - Run command `deactivate` to deactivate the virtual environment
 
